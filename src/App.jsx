@@ -26,7 +26,7 @@ function App() {
         </div>
       </header>
       <Translate />
-      <footer className="footer"><span>Traductor web usando <a target="_blank" className="footer__link" href="https://rapidapi.com/armangokka/api/translo">Translo API</a> por <a className="footer__link" href="#" target="blank_">Byron</a></span></footer>
+      <footer className="footer"><span>Traductor web usando <a target="_blank" className="footer__link" href="https://rapidapi.com/armangokka/api/translo">Translo API</a> por <a className="footer__link" href="https://github.com/byronjvh" target="blank_">Byron</a></span></footer>
     </div>
   )
 }
