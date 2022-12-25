@@ -1,0 +1,107 @@
+.writebox {
+    width: 100%;
+    max-width: 497px;
+    min-height: 250px;
+    background-color: var(--bg);
+    border: 1px solid var(--outline);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: calc(22px - 1px);
+    position: relative;
+    font-size: var(--medium);
+    gap: 22px;
+    cursor: text;
+}
+
+.writebox__input {
+    width: calc(100% - 22px);
+    max-height: 300px;
+    font-size: inherit;
+    background: none;
+    border: none;
+    font-family: inherit;
+    resize: none;
+    color: var(--text);
+}
+
+.writebox__input::placeholder {
+    color: var(--text-light);
+}
+
+.writebox__input:focus{
+    outline: none;
+}
+
+.writebox.focus {
+    border: 1px solid var(--accent-blue);
+}
+
+.writebox__input::-webkit-scrollbar{
+    width: 14px;
+}
+
+.writebox__input::-webkit-scrollbar-thumb{
+    background-color: var(--outline);
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 10px;
+}
+
+.writebox__delete {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    top: 22px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text);
+    transition: background-color .2s ease-out;
+}
+
+.writebox__delete:hover{ 
+    background-color: var(--bg-textbox);
+}
+
+.writebox__delete.visible {
+    display: flex;
+}
+
+.writebox__detect {
+    display: none;
+    color: var(--text-negative);
+    background-color: var(--accent-blue);
+    transition: background-color .2s ease-out;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: var(--small);
+    width: max-content;
+    cursor: pointer;
+}
+
+.writebox__detect:hover {
+    background-color: var(--accent-light-blue);
+}
+
+body.dark .writebox__detect {
+    background-color: var(--accent-dark-blue);
+}
+
+body.dark .writebox__detect:hover {
+    background-color: var(--accent-blue);
+}
+
+.writebox__detect.visible {
+    display: unset;
+}
+
+@media screen and (max-width: 460px){
+    .writebox {
+        min-height: 180px;
+    }
+}

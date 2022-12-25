@@ -1,0 +1,16 @@
+.circle {
+    height: 40px;
+    width: 40px;
+    border: 5px solid;
+    border-color: var(--accent-orange) var(--accent-orange) var(--accent-orange) var(--bg-textbox);
+    border-radius: 50%;
+    overflow: hidden;
+    animation: Spinner 1s ease infinite;
+    margin: 10px 16px 10px 30px;
+}
+
+@keyframes Spinner {
+    100% {
+        transform: rotate(360deg);  
+    }
+}

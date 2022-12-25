@@ -1,0 +1,111 @@
+.textbox {
+    width: 100%;
+    max-width: 497px;
+    min-height: 250px;
+    background-color: var(--bg-textbox);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    position: relative;
+    font-size: var(--medium);
+    gap: 22px;
+    cursor: text;
+}
+
+.textbox__text {
+    position: relative;
+    width: 100%;
+    max-height: 300px;
+    font-size: inherit;
+    background: none;
+    border: none;
+    font-family: inherit;
+    resize: none;
+    color: var(--text);
+    overflow-wrap: break-word;
+}
+
+.textbox__placeholder {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    color: var(--text-light);
+}
+
+.textbox__placeholder.hide{
+    display: none;
+}
+
+.textbox__text::-webkit-scrollbar{
+    width: 14px;
+}
+
+.textbox__text::-webkit-scrollbar-thumb{
+    background-color: var(--outline);
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 10px;
+} 
+
+.textbox__copy {
+    position: absolute;
+    cursor: pointer;
+    color: var(--text);
+    background-color: var(--bg-textbox);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    bottom: 15px;
+    right: 15px;
+    transition: background-color .2s ease-out;
+}
+
+.textbox__copy:hover {
+    background-color: var(--bg);
+}
+
+.textbox__copy--popup {
+    background: var(--accent-orange);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 5px;
+    right: 15px;
+    bottom: -35px;
+    transform: translateY(-20%) scale(0);
+    transform-origin: top right;
+    transition: transform .1s ease-out;
+    font-size: var(--small);
+    font-weight: 500;
+    color: var(--text-negative);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+}
+
+.textbox__copy--popup.show {
+    transform: translateY(0) scale(1);
+}
+
+.textbox__copy--popup::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent-orange);
+    clip-path: polygon(50% 0%, 0 60%, 100% 60%);
+    right: 10px;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 460px){
+    .textbox {
+        min-height: 180px;
+    }
+}
