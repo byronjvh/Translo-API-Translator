@@ -120,3 +120,28 @@ body.dark .footer__link {
 body.dark .footer__link:hover {
     color: var(--accent-light-blue);
 }
+
+@media screen and (max-width: 768px){
+    .themeSwitcher {
+        width: 54px;
+    }
+    
+    .themeSwitcher_circle {
+        height: 22px;
+        width: 22px;
+    }
+
+    .themeSwitcher_circle .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .themeSwitcher_circle .sun {
+        width: 18px;
+        height: 18px;
+    }
+
+    .themeSwitcher.dark .themeSwitcher_circle {
+        transform: translateX(24px);
+    }
+}
