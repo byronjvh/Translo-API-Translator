@@ -112,4 +112,13 @@ body.dark .langList__language:hover {
     .langButton {
         height: 47px;
     }
+
+    .langList {
+        font-size: var(--small);
+        padding: 3px;
+    }
+
+    .langList__language { 
+        padding: 10px 5px;
+    }
 }
