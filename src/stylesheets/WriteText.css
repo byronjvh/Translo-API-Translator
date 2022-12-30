@@ -1,6 +1,5 @@
 .writebox {
     width: 100%;
-    max-width: 497px;
     min-height: 250px;
     background-color: var(--bg);
     border: 1px solid var(--outline);
@@ -100,8 +99,3 @@ body.dark .writebox__detect:hover {
     display: unset;
 }
 
-@media screen and (max-width: 460px){
-    .writebox {
-        min-height: 180px;
-    }
-}

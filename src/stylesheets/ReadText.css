@@ -1,6 +1,5 @@
 .textbox {
     width: 100%;
-    max-width: 497px;
     min-height: 250px;
     background-color: var(--bg-textbox);
     border-radius: 10px;
@@ -102,10 +101,4 @@
     right: 10px;
     top: 0;
     transform: translateY(-50%);
-}
-
-@media screen and (max-width: 460px){
-    .textbox {
-        min-height: 180px;
-    }
 }

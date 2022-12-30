@@ -19,14 +19,14 @@
 .themeSwitcher {
     position: absolute;
     right: 0;
-    top: 30px;
+    top: 26px;
     cursor: pointer;
-    width: 66px;
+    width: 54px;
     padding: 4px;
     display: flex;
     align-items: center;
     background-color: var(--accent-orange);
-    transition: background-color .4s ease-out;
+    transition: background-color .3s ease-out;
     border-radius: 50px;
 }
 
@@ -36,22 +36,22 @@
 
 
 .themeSwitcher_circle {
-    height: 28px;
-    width: 28px;
+    height: 22px;
+    width: 22px;
     background-color: var(--text-negative);
     border-radius: 50%;
     transform: translateX(0);
-    transition: transform .4s ease-out;
+    transition: transform .3s ease-out;
     position: relative;
 }
 
 .themeSwitcher.dark .themeSwitcher_circle {
-    transform: translateX(30px);
+    transform: translateX(24px);
 }
 
 .themeSwitcher_circle .icon {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -64,14 +64,14 @@
 }
 
 .themeSwitcher_circle .sun {
-    width: 22px;
-    height: 22px;
-    transition: opacity .4s ease-out;
+    width: 18px;
+    height: 18px;
+    transition: opacity .3s ease-out;
 }
 
 .themeSwitcher_circle .moon {
     opacity: 0;
-    transition: opacity .4s ease-out;
+    transition: opacity .3s ease-out;
 }
 
 .themeSwitcher.dark .sun {
@@ -119,29 +119,4 @@ body.dark .footer__link {
 
 body.dark .footer__link:hover {
     color: var(--accent-light-blue);
-}
-
-@media screen and (max-width: 768px){
-    .themeSwitcher {
-        width: 54px;
-    }
-    
-    .themeSwitcher_circle {
-        height: 22px;
-        width: 22px;
-    }
-
-    .themeSwitcher_circle .icon {
-        width: 16px;
-        height: 16px;
-    }
-
-    .themeSwitcher_circle .sun {
-        width: 18px;
-        height: 18px;
-    }
-
-    .themeSwitcher.dark .themeSwitcher_circle {
-        transform: translateX(24px);
-    }
 }

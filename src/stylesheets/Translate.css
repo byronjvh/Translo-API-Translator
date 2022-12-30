@@ -1,14 +1,13 @@
 .translateContainer {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: var(--big);
 }
 
 .langChanger {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content minmax(0, 1fr);
+    gap: 10px;
 }
 
 .langChanger__switch {
@@ -36,48 +35,12 @@
 
 .textContainer {    
     display: flex;
-    gap: 22px;
+    gap: var(--big);
     width: 100%;
 }
 
-@media screen and (max-width: 460px){
-    .langChanger {
-        display: grid;
-        grid-template-columns: 1fr min-content;
-        grid-template-areas:
-        "button switch"
-        "button switch";
-    }
-
-    .langChanger__switch {
-        grid-area: switch;
-        transform: rotateZ(90deg);
-    }
-
-    .translateContainer {
-        gap: 10px;
-    }
-
-    .langChanger {
-        gap: 6px;
-    }
-
-    .textContainer {    
-        gap: 10px;
-    }
-}
-
-@media screen and (max-width: 460px){
+@media screen and (max-width: 600px){
     .textContainer {
         flex-wrap: wrap;
-    }
-
-    .langChanger__switch {
-        min-height: 52px;
-        min-width: 52px;
-    }
-
-    .langChanger__icon {
-        font-size: 28px;
     }
 }

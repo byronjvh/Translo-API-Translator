@@ -1,12 +1,12 @@
 .langButton {
     width: 100%;
-    padding: 0 15px;
+    padding: 0 20px 0 15px;
     height: 57px;
     font-weight: 500;
     font-size: var(--big);
     border-radius: 10px;
     color: var(--text-negative);
-    display: flex;
+    display:flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -15,8 +15,14 @@
     cursor: pointer;
 }
 
-.langButton:hover {
+.langButton:hover{
     background-color: var(--accent-light-orange);
+}
+
+.langButton__current{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .langList {
@@ -30,7 +36,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2px 5px;
     max-width: min-content;
-    max-height: 250px;
+    max-height: 350px;
     overflow: hidden scroll;
     top: 100%;
     left: 0;
@@ -91,6 +97,10 @@ body.dark .langList__language:hover {
 }
 
 .langButton__icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--text-negative);
 }
 
@@ -103,22 +113,19 @@ body.dark .langList__language:hover {
     transform: rotateZ(180deg);
 }
 
-@media screen and (max-width: 460px){
-    .langButton.right > .langList{
-        right: unset;
-        left: 0;
+@media screen and (max-width: 375px) {
+    .langButton__icon {
+        right: 5px;
     }
 
     .langButton {
-        height: 47px;
+        padding: 0 20px 0 5px;
     }
+}
 
+@media screen and (max-width: 450px) {
     .langList {
-        font-size: var(--small);
-        padding: 3px;
-    }
-
-    .langList__language { 
-        padding: 10px 5px;
+        grid-template-columns: 1fr 1fr;
+        max-height: 600px;
     }
 }

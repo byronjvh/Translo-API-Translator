@@ -17,10 +17,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --header: 50px;
-  --big: 22px;
-  --medium: 18px;
-  --small: 16px
+  --header: 40px;
+  --big: 18px;
+  --medium: 16px;
+  --small: 14px
 }
 
 a {
@@ -76,22 +76,4 @@ h1 {
 
 button{
   border: none;
-}
-
-@media screen and (max-width: 768px){
-  :root {
-    --header: 46px;
-    --big: 18px;
-    --medium: 16px;
-    --small: 14px
-  }
-}
-
-@media screen and (max-width: 460px){
-  :root {
-    --header: 44px;
-    --big: 16px;
-    --medium: 14px;
-    --small: 12px
-  }
 }
