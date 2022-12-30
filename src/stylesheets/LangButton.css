@@ -113,16 +113,6 @@ body.dark .langList__language:hover {
     transform: rotateZ(180deg);
 }
 
-@media screen and (max-width: 375px) {
-    .langButton__icon {
-        right: 5px;
-    }
-
-    .langButton {
-        padding: 0 20px 0 5px;
-    }
-}
-
 @media screen and (max-width: 450px) {
     .langList {
         grid-template-columns: 1fr 1fr;
