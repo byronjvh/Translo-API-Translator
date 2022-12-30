@@ -99,3 +99,9 @@ body.dark .writebox__detect:hover {
     display: unset;
 }
 
+@media screen and (max-width: 600px){
+    .writebox {
+        width: 100%;
+        min-height: 100px;
+    }
+}
